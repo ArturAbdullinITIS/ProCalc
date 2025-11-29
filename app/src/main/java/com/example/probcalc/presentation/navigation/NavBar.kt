@@ -1,7 +1,9 @@
 package com.example.probcalc.presentation.navigation
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material3.Icon
@@ -31,6 +33,7 @@ import com.example.probcalc.presentation.ui.theme.Percent
 fun NavBar() {
     val navController = rememberNavController()
     Scaffold(
+
         bottomBar = {
             BottomNavBar(navController = navController)
         }
