@@ -17,6 +17,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavHost
@@ -28,6 +29,7 @@ import com.example.probcalc.presentation.screens.comb.CombScreen
 import com.example.probcalc.presentation.screens.prob.ProbScreen
 import com.example.probcalc.presentation.ui.theme.Contrast_circle
 import com.example.probcalc.presentation.ui.theme.Percent
+import ru.itis.notifications.R
 
 @Composable
 fun NavBar() {
@@ -66,7 +68,8 @@ fun BottomNavBar(navController: NavController) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
     NavigationBar(
-        modifier = Modifier.clip(RoundedCornerShape(24.dp))
+        modifier = Modifier
+            .clip(RoundedCornerShape(24.dp))
             .background(MaterialTheme.colorScheme.surface),
         tonalElevation = 8.dp,
     ) {
@@ -95,7 +98,7 @@ fun BottomNavBar(navController: NavController) {
 @Composable
 private fun getScreenTitle(screen: Screen): String {
     return when(screen) {
-        Screen.Combinatorics -> "combinatorics"
-        Screen.Probability -> "probability"
+        Screen.Combinatorics -> stringResource(R.string.combinatorics)
+        Screen.Probability -> stringResource(R.string.probability)
     }
 }

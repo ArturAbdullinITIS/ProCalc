@@ -19,11 +19,13 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.probcalc.domain.model.CalcType
+import ru.itis.notifications.R
 
 @Composable
 fun InputNTextField(
@@ -40,7 +42,7 @@ fun InputNTextField(
                 onValueChange(newValue)
             }
         },
-        placeholder = { Text("Input n value") },
+        placeholder = { Text(stringResource(R.string.input_n_value)) },
         singleLine = true,
         shape = RoundedCornerShape(20.dp),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
@@ -62,7 +64,7 @@ fun InputKTextField(
                 onValueChange(newValue)
             }
         },
-        placeholder = { Text("Input k value") },
+        placeholder = { Text(stringResource(R.string.input_k_value)) },
         singleLine = true,
         shape = RoundedCornerShape(20.dp),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
@@ -81,7 +83,7 @@ fun CalculateButton(
         shape = RoundedCornerShape(20.dp),
         enabled = enabled
     ) {
-        Text(text = "Calculate")
+        Text(text = stringResource(R.string.calculate))
     }
 }
 
@@ -109,7 +111,7 @@ fun CustomDropDownPanel(
             singleLine = true,
             shape = RoundedCornerShape(20.dp),
             placeholder = {
-                Text("Select Type")
+                Text(stringResource(R.string.select_type))
             },
             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) }
         )
@@ -136,9 +138,9 @@ fun CustomDropDownPanel(
 @Composable
 private fun getCalcTypeDisplayName(type: CalcType): String {
     return when (type) {
-        CalcType.PLACEMENT -> "Placement"
-        CalcType.PERMUTATION -> "Permutation"
-        CalcType.COMBINATION -> "Combination"
+        CalcType.PLACEMENT -> stringResource(R.string.placement)
+        CalcType.PERMUTATION -> stringResource(R.string.permutation)
+        CalcType.COMBINATION -> stringResource(R.string.combination)
     }
 }
 
@@ -157,7 +159,7 @@ fun WithRepeats(
             onCheckedChange = onCheckedChange
         )
         Text(
-            text = "With repeats"
+            text = stringResource(R.string.with_repeats)
         )
     }
 }
@@ -208,7 +210,7 @@ fun Result(
         supportingText = {
             if (isError) {
                 Text(
-                    text = "Error",
+                    text = stringResource(R.string.error),
                     color = MaterialTheme.colorScheme.error
                 )
             }

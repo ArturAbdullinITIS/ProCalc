@@ -14,10 +14,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import ru.itis.notifications.R
 
 @Composable
 fun InputKTextField(
@@ -34,7 +36,7 @@ fun InputKTextField(
                 onValueChange(newValue)
             }
         },
-        placeholder = { Text("Input k value") },
+        placeholder = { Text(stringResource(R.string.input_k_value)) },
         singleLine = true,
         shape = RoundedCornerShape(20.dp),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
@@ -56,7 +58,7 @@ fun InputNTextField(
                 onValueChange(newValue)
             }
         },
-        placeholder = { Text("Input n value") },
+        placeholder = { Text(stringResource(R.string.input_n_value)) },
         singleLine = true,
         shape = RoundedCornerShape(20.dp),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
@@ -78,7 +80,7 @@ fun InputMTextField(
                 onValueChange(newValue)
             }
         },
-        placeholder = { Text("Input m value") },
+        placeholder = { Text(stringResource(R.string.input_m_value)) },
         singleLine = true,
         shape = RoundedCornerShape(20.dp),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
@@ -100,7 +102,7 @@ fun InputRTextField(
                 onValueChange(newValue)
             }
         },
-        placeholder = { Text("Input r value") },
+        placeholder = { Text(stringResource(R.string.input_r_value)) },
         singleLine = true,
         shape = RoundedCornerShape(20.dp),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
@@ -119,7 +121,7 @@ fun CalculateButton(
         shape = RoundedCornerShape(20.dp),
         enabled = enabled
     ) {
-        Text(text = "Calculate")
+        Text(text = stringResource(R.string.calculate ))
     }
 }
 
@@ -138,7 +140,7 @@ fun AllMarked(
             onCheckedChange = onCheckedChange
         )
         Text(
-            text = "All marked items"
+            text = stringResource(R.string.all_marked_items)
         )
     }
 }
@@ -189,7 +191,7 @@ fun Result(
         supportingText = {
             if (isError) {
                 Text(
-                    text = "Error",
+                    text = stringResource(R.string.error),
                     color = MaterialTheme.colorScheme.error
                 )
             }

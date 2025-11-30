@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProbCalc</string>
+    <string name="please_enter_valid_numbers">Пожалуйста введите корректные значения</string>
+    <string name="numbers_must_be_non_negative">Числа не должны быть отрицательными</string>
+    <string name="for_permutations_with_repeats_k_must_equal_n">k должо быть равно n</string>
+    <string name="k_cannot_be_greater_than_n">k не может быть больше n</string>
+    <string name="m_cannot_be_greater_than_n">m не может быть больше n</string>
+    <string name="k_cannot_be_greater_than_m_when_all_marked">k не может быть больше m когда все помечены</string>
+    <string name="please_enter_r_value">Введите корректное r</string>
+    <string name="r_must_be_non_negative">r не может быть отрицательным</string>
+    <string name="r_cannot_be_greater_than_m">r не больше m</string>
+    <string name="r_cannot_be_greater_than_k">r не больше k</string>
+    <string name="invalid_probability">Некорректная вероятность</string>
+    <string name="probability_cannot_exceed_1">Вероятность не может быть больше 1</string>
+    <string name="combinatorics">Комбинаторика</string>
+    <string name="probability">Вероятность</string>
+    <string name="input_n_value">Введите n</string>
+    <string name="input_k_value">Введите k</string>
+    <string name="calculate">Расчитать</string>
+    <string name="select_type">Выберите вид</string>
+    <string name="with_repeats">С повторениями</string>
+    <string name="placement">Размещение</string>
+    <string name="permutation">Перестановка</string>
+    <string name="combination">Сочетание</string>
+    <string name="error">Ошибка</string>
+    <string name="combinatorics_screen">Комбинаторика</string>
+    <string name="result_comb">Результат</string>
+    <string name="input_m_value">Введите m</string>
+    <string name="input_r_value">Введите r</string>
+    <string name="all_marked_items">Все помечены</string>
+    <string name="probability_screen">Вероятность</string>
+</resources>

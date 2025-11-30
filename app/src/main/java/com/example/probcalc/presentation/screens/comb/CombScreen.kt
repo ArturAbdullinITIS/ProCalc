@@ -17,8 +17,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import ru.itis.notifications.R
 
 
 @Composable
@@ -52,7 +54,7 @@ private fun CombScreenContent(
         ) {
             Title(
                 modifier = modifier,
-                value = "Combinatorics"
+                value = stringResource(R.string.combinatorics_screen)
             )
             Spacer(modifier = Modifier.height(8.dp))
             CustomDropDownPanel(
@@ -91,7 +93,7 @@ private fun CombScreenContent(
             Spacer(modifier = Modifier.height(8.dp))
 
             ResultTitle(
-                value = "Result"
+                value = stringResource(R.string.result_comb)
             )
             Spacer(modifier = Modifier.height(8.dp))
 

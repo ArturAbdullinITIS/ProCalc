@@ -12,8 +12,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import ru.itis.notifications.R
 
 @Composable
 fun ProbScreen() {
@@ -44,7 +46,7 @@ private fun ProbScreenContent(
         ) {
             Title(
                 modifier = modifier,
-                value = "Probability"
+                value = stringResource(R.string.probability_screen)
             )
             Spacer(modifier = Modifier.height(8.dp))
             InputNTextField(
@@ -91,7 +93,7 @@ private fun ProbScreenContent(
             Spacer(modifier = Modifier.height(8.dp))
 
             ResultTitle(
-                value = "Result"
+                value = stringResource(R.string.result_comb)
             )
             Spacer(modifier = Modifier.height(8.dp))
 

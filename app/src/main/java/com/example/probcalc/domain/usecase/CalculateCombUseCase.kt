@@ -5,8 +5,12 @@ import javax.inject.Inject
 
 import com.example.probcalc.domain.model.CalcType
 import com.example.probcalc.utils.MathUtils
+import com.example.probcalc.utils.ResourceProvider
+import ru.itis.notifications.R
 
-class CalculateCombUseCase @Inject constructor() {
+class CalculateCombUseCase @Inject constructor(
+    private val resourceProvider: ResourceProvider
+) {
 
     operator fun invoke(state: CombScreenState): String {
         return try {
@@ -14,11 +18,11 @@ class CalculateCombUseCase @Inject constructor() {
             val k = state.k.toIntOrNull()
 
             if (n == null || k == null) {
-                return "Please enter valid numbers"
+                return resourceProvider.getString(R.string.please_enter_valid_numbers)
             }
 
             if (n < 0 || k < 0) {
-                return "Numbers must be non-negative"
+                return resourceProvider.getString(R.string.numbers_must_be_non_negative)
             }
 
             val result = when (state.type) {
@@ -34,7 +38,7 @@ class CalculateCombUseCase @Inject constructor() {
                         // Для перестановок с повторениями нужны группы
                         // В этом упрощенном случае считаем как обычные перестановки
                         if (k != n) {
-                            return "For permutations with repeats, k must equal n"
+                            return resourceProvider.getString(R.string.for_permutations_with_repeats_k_must_equal_n)
                         }
                         MathUtils.factorial(n)
                     } else {
